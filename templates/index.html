@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Watchlist</title>
+</head>
+<body>
+    <h1>Мой список фильмов</h1>
+    <form action="/add" method="post">
+        <input type="text" name="title" placeholder="Название фильма" required>
+        <button type="submit">Добавить</button>
+    </form>
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
